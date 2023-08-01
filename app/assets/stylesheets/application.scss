@@ -4,32 +4,120 @@
 $font-family-sans-serif: 'Titillium Web', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 @import "bootstrap";
 
-.card-body {
-  padding-top: 2rem;
-  padding: 2rem;
+:root, [data-bs-theme="light"], [data-bs-theme="dark"] {
+  --bs-body-bg: var(--bs-secondary-bg-subtle);
+  --bs-card-border-width: 0;
+  --shadow-dark-color-rgb: 0, 0, 0;
+  --shadow-light-color-rgb: 50, 50, 50;
+  --shadow-layered: 1px 1px 1px rgba(var(--shadow-dark-color-rgb), 0.2),
+      2px 2px 2px rgba(var(--shadow-dark-color-rgb), 0.2),
+      4px 4px 4px rgba(var(--shadow-dark-color-rgb), 0.2),
+      8px 8px 8px rgba(var(--shadow-dark-color-rgb), 0.2),
+      16px 16px 16px rgba(var(--shadow-dark-color-rgb), 0.2),
+      32px 32px 32px rgba(var(--shadow-dark-color-rgb), 0.2);
+  --shadow-dreamy-double: 1px 1px 2px rgba(var(--shadow-dark-color-rgb), 0.07),
+      2px 2px 4px rgba(var(--shadow-dark-color-rgb), 0.07),
+      4px 4px 8px rgba(var(--shadow-dark-color-rgb), 0.07),
+      8px 8px 16px rgba(var(--shadow-dark-color-rgb), 0.07),
+      16px 16px 32px rgba(var(--shadow-dark-color-rgb), 0.07),
+      32px 32px 64px rgba(var(--shadow-dark-color-rgb), 0.07),
+      -1px -1px 2px rgba(var(--shadow-light-color-rgb), 0.01),
+      -2px -2px 4px rgba(var(--shadow-light-color-rgb), 0.01),
+      -4px -4px 8px rgba(var(--shadow-light-color-rgb), 0.01),
+      -8px -8px 16px rgba(var(--shadow-light-color-rgb), 0.01),
+      -16px -16px 32px rgba(var(--shadow-light-color-rgb), 0.01),
+      -32px -32px 64px rgba(var(--shadow-light-color-rgb), 0.01);
+  --shadow-longer-double: 2px 2px 1px rgba(var(--shadow-dark-color-rgb), 0.1),
+      4px 4px 2px rgba(var(--shadow-dark-color-rgb), 0.1),
+      8px 8px 4px rgba(var(--shadow-dark-color-rgb), 0.1),
+      16px 16px 8px rgba(var(--shadow-dark-color-rgb), 0.1),
+      32px 32px 16px rgba(var(--shadow-dark-color-rgb), 0.1),
+      -2px -2px 1px rgba(var(--shadow-light-color-rgb), 0.03),
+      -4px -4px 2px rgba(var(--shadow-light-color-rgb), 0.03),
+      -8px -8px 4px rgba(var(--shadow-light-color-rgb), 0.03),
+      -16px -16px 8px rgba(var(--shadow-light-color-rgb), 0.03),
+      -32px -32px 16px rgba(var(--shadow-light-color-rgb), 0.03);
 }
-
+.card {
+  border: 0;
+  border-radius: var(--bs-border-radius-xxl);
+  box-shadow: var(--shadow-longer-double);
+  transition: all .2s ease-in-out;
+}
+.card-body {
+  // padding: 2rem;
+  // padding-bottom: 3rem;
+}
+.carousel-row {
+  height:100%;
+}
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+footer svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
 // .card-img-bg {
 //   position:relative;
 //   background-position: center;
 //   background-repeat: no-repeat;
 //   background-size: cover;
 //   padding: 0;
-//   height:100%;
-//   width:100%;
+//   // height:100%;
+//   // width:100%;
 // }
-
-img.hover-effect {
-  /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
-  filter: gray;
-  /* IE5+ */
-  -webkit-filter: grayscale(1);
+img, svg {
   transition: all .2s ease-in-out;
 }
+.img-carousel {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
 
-img:hover {
-  filter: none;
-  -webkit-filter: grayscale(0);
-  -webkit-transform: scale(1.01);
-  transform: scale(1.01);
+// img.hover-effect, svg.hover-effect {
+//   /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
+//   filter: gray;// blur(1px);
+//   /* IE5+ */
+//   -webkit-filter: grayscale(1) brightness(0.8);// blur(1px);
+//   // transition: all .2s ease-in-out;
+
+// }
+// .card {
+//   transition: all .2s ease-in-out;
+// }
+// .card:hover {
+//   transform: translateY(-0.3rem);
+//   img,
+//     svg {
+//       filter: none;
+//       -webkit-filter: grayscale(0) brightness(1);
+//       // -webkit-transform: scale(1.01);
+//     }
+// }
+
+.splide,.splide__slide,.splide__list, .splide__track {
+  // border-radius: var(--bs-border-radius-xxl);
+}
+.splide__arrow {
+  -ms-flex-align: center;
+  align-items: center;
+  background: #ccc;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2em;
+  -ms-flex-pack: center;
+  justify-content: center;
+  opacity: .5;
+  padding: 0;
+  position: absolute;
+  top: 90%;
+  transform: translateY(-50%);
+  width: 2em;
+  z-index: 1
 }

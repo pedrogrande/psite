@@ -22,3 +22,4 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+ style="background:url(<%= asset_path 'p-bang.jpg' %>) no-repeat center/cover;"

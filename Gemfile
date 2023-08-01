@@ -6,6 +6,7 @@ ruby "3.2.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.6"
 gem 'bootstrap', '~> 5.3.0.alpha3'
+gem 'inline_svg'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
@@ -62,6 +63,7 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem "hotwire-livereload", "~> 1.2"
 end
 
 group :test do

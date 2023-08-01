@@ -1,216 +1,84 @@
 <div class="px-4 py-5">
-  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-    <div class="col-10 col-sm-4">
-      <img src="<%= asset_path 'pete.jpg' %>" class="d-block mx-lg-auto img-fluid rounded-5 shadow-lg border border-4" alt="Pete Argent laughing" width="700" height="500" loading="lazy">
+<%= render 'banner' %>
+
+<div class="row align-items-start">
+
+  <div class="col-12 col-md-6 mb-5 card bg-dark rounded-5 p-0">
+    <%= image_tag 'p-helping2.jpg', class: 'card-img-top rounded-5 hover-effect' %>
+    <div class="card-body rounded-5 rounded-top-0 p-4">
+      <h4 class="card-title my-3">Digital skills, innovation and entrepreneurship training </h4>
+      
+      <p class="card-text my-3">In 2017, I travelled twice to Sri Lanka with a United Nations agency, ITU, to deliver
+        train-the-trainer education to people from the Department of Agriculture and the Telecommunications Regulatory
+        Commission.</p>
     </div>
-    <div class="col-lg-8">
-      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Solving IRL problems with future tech</h1>
-      <p class="lead">Designing and building converging, emerging technology.</p>
-      <p class="lead">I love inspiring people to learn digital skills so they can design and build solutions to the world's problems with converging, emerging technology.</p>
-    </div>
+  </div>
+
+  <div class="col-12 col-md-6 ps-lg-5">
+
+    <div class="row">
+      <div class="col-12 mb-5 card p-4">
+        <div class="row g-0">
+          <div class="col-md-6 col-lg-4">
+            <a href="https://www.ucubed.co" target="_blank">
+              <%= image_tag 'UCUBED-mini.png' , class: 'img-fluid rounded-5 rounded-end-0 border-end-0 p-4 hover-effect' %>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-8">
+            <div class="card-body rounded-5 rounded-start-0 border-start-0">
+              <h4 class="card-title">U CUBED: teaching web3 digital skills</h4>
+              <p class="card-text">I love teaching people and empowering them with skills, knowledge and experiences that
+                provides new
+                opportunities in their lives.</p>
+              <p><a href="https://www.ucubed.co" target="_blank" class="btn btn-sm btn-outline-secondary">Check out U
+                  CUBED</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 pe-3">
+        <div class="card rounded-5 p-0 mb-5">
+          <a href="https://www.youtube.com/watch?v=rBW7hVNYzNU" target="_blank">
+            <%= image_tag 'tedxyt.jpg' , class: 'img-fluid rounded-5 hover-effect' %>
+          </a>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 ps-3 mb-5">
+        <%= render 'socials' %>
+        
+      </div>
+    </div>    
   </div>
 </div>
+  
+  
+ 
 
-<div class="row grid" data-masonry='{"percentPosition": true }'>
-    <div class="grid-sizer col-6 col-md-4 col-lg-2"></div>
-
-    <div class="col-sm-6 col-lg-4 mb-4">
-      <div class="card rounded-5 shadow-lg">
-        <%= image_tag 'p-helping.jpg', class: 'card-img-top rounded-5 rounded-bottom-0 hover-effect' %>
-        <div class="card-body rounded-5 rounded-top-0 border-top-0">
-          <h3 class="card-title">Digital skills, innovation and entrepreneurship training </h3>
-          
-          <p class="card-text">In 2017, I travelled twice to Sri Lanka with a United Nations agency, ITU, to deliver
-            train-the-trainer education to people from the Department of Agriculture and the Telecommunications Regulatory
-            Commission.</p>
+<div class="row align-items-start mb-5 g-0">
+  
+  <div class="col-12 col-md-6 mb-5">
+    <%= render 'carousel' %>
+  </div>
+  
+  <div class="col ps-0 ps-md-5">
+    <div class="row g-0 align-items-start">
+      <div class="col-12 col-md-6 px-1 pe-md-3 mb-5">
+        <div class="card rounded-5 p-0 bg-info-subtle bg-secondary-subtle">
+          <!-- <a href="https://github.com/pedrogrande" target="_blank"> -->
+            <%= image_tag 'Map.png' , class: 'img-fluid rounded-5 hover-effect' %>
+          <!-- </a> -->
         </div>
       </div>
-    </div>
-
-    <div class="col-sm-8 mb-4">
-      <div class="card rounded-5 shadow-lg">
-        <div class="row g-0">
-          <div class="col-md-3">
-            <a href="https://www.ucubed.co" target="_blank"><%= image_tag 'UCUBED-mini.png', class: 'img-fluid rounded-5 rounded-end-0 border-end-0 p-4' %></a>
-          </div>
-          <div class="col-md-9">
-            <div class="card-body rounded-5 rounded-start-0 border-start-0">
-              <h3 class="card-title">U CUBED: teaching web3 digital skills</h3>
-              <p class="card-text">I love teaching people and empowering them with skills, knowledge and experiences that provides new
-                opportunities in their lives.</p>
-              <p><a href="https://www.ucubed.co" target="_blank" class="btn btn-sm btn-outline-secondary">Check out U CUBED</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6 col-lg-4 mb-4">
-      <div class="card rounded-5 shadow-lg p-0">
-        <a href="https://www.youtube.com/watch?v=rBW7hVNYzNU" target="_blank">
-          <%= image_tag 'tedxyt.jpg' , class: 'img-fluid rounded-5 hover-effect' %>
-        </a>
-      </div>
-    </div>
-
-    
-
-    <div class="col-sm-6 mb-4">
-      <div class="card rounded-5 shadow-lg">
-        <div class="row g-0">
-          <div class="col-md-5 rounded-5 rounded-end-0 border-end-0" style="background:url(<%= asset_path 'p-bang.jpg' %>) no-repeat center/cover;">
-            <!-- <p></p> -->
-          </div>
-          <div class="col-md-7">
-            <div class="card-body rounded-5 rounded-start-0 border-start-0">
-              <h3 class="card-title">Digital product design & development</h3>
-              <p class="card-text">I work with tech startup founders to design, develop and launch their products.</p>
-              <p><a href="https://velv.cc" target="_blank" class="btn btn-sm btn-outline-secondary">Check out Velv</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-4 col-lg-2 mb-4">
-      <div class="card rounded-5 shadow-lg p-0 bg-light">
-        <a href="https://github.com/pedrogrande" target="_blank">
-          <%= image_tag 'github2.png' , class: 'img-fluid rounded-5 py-3 hover-effect' %>
-        </a>
-      </div>
-    </div>
-
-
-    <div class="col-sm-6 col-lg-4 mb-4">
-      <div class="card rounded-5 shadow-lg">
-        <%= image_tag 'p-helping.jpg' , class: 'card-img-top rounded-5 rounded-bottom-0' %>
-          <%# <svg class="bd-placeholder-img card-img-top rounded-5 rounded-bottom-0" width="100%" height="200"
-            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap"
-            preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image
-              cap</text></svg> %>
-            <div class="card-body rounded-5 rounded-top-0 border-top-0">
-              <h3 class="card-title">Digital skills, innovation and entrepreneurship training </h3>
-    
-              <p class="card-text">In 2017, I travelled twice to Sri Lanka with a United Nations agency, ITU, to deliver
-                train-the-trainer education to people from the Department of Agriculture and the Telecommunications
-                Regulatory
-                Commission.</p>
-            </div>
-      </div>
-    </div>
-
-    <div class="col-sm-6 col-lg-4 mb-4">
-      <div class="card rounded-5 shadow-lg p-0">
-        <a href="https://www.youtube.com/watch?v=OW1djJd9Fu0" target="_blank">
-          <%= image_tag 'abcnews.jpg' , class: 'img-fluid rounded-5 hover-effect' %>
-        </a>
-      </div>
-    </div>
-
-    <div class="col-sm-4 col-lg-2 mb-4">
-      <div class="card rounded-5 shadow-lg p-0 bg-light">
-        <a href="https://github.com/pedrogrande" target="_blank">
-          <%= image_tag 'Linkedin.png' , class: 'img-fluid rounded-5 hover-effect' %>
-        </a>
-      </div>
-    </div>
-
-    <div class="col-sm-6 mb-4">
-      <div class="card rounded-5 shadow-lg">
-        <div class="row g-0">
-          <div class="col-md-5">
-            <%= image_tag 'KPMG.jpg' , class: 'img-fluid rounded-5 rounded-end-0 border-end-0 hover-effect' %>
-          </div>
-          <div class="col-md-7">
-            <div class="card-body rounded-5 rounded-start-0 border-start-0">
-              <h3 class="card-title">Corporate training</h3>
-              <p class="card-text">I work with tech startup founders to design, develop and launch their products.</p>
-              <!-- <p><a href="https://velv.cc" target="_blank" class="btn btn-sm btn-outline-secondary">Check out Velv</a></p> -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-6 mb-4">
-      <div class="card rounded-5 shadow-lg">
-        <div class="row g-0">
-          <div class="col-md-5">
-            <%= image_tag 'p-ousl1.jpg' , class: 'img-fluid rounded-5 rounded-end-0 border-end-0 hover-effect' %>
-          </div>
-          <div class="col-md-7">
-            <div class="card-body rounded-5 rounded-start-0 border-start-0">
-              <h3 class="card-title">University workshops</h3>
-              <p class="card-text">I work with tech startup founders to design, develop and launch their products.</p>
-              <!-- <p><a href="https://velv.cc" target="_blank" class="btn btn-sm btn-outline-secondary">Check out Velv</a></p> -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-6 col-lg-4 mb-4">
-      <div class="card">
-        <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-        <div class="card-body">
-          <h5 class="card-title">Digital product design & development</h5>
-          <p class="card-text">I work with tech startup founders to design, develop and launch their products.</p>
-          <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6 col-lg-3 mb-4">
-      <div class="card text-bg-dark text-center p-3">
-        <figure class="mb-0">
-          <blockquote class="blockquote">
-            <p>A well-known quote, contained in a blockquote element.</p>
-          </blockquote>
-          <figcaption class="blockquote-footer mb-0 text-white">
-            Someone famous in <cite title="Source Title">Source Title</cite>
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-    <div class="col-sm-6 col-lg-4 mb-4">
-      <div class="card text-center">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This card has a regular title and short paragraph of text below it.</p>
-          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6 col-lg-4 mb-4">
-      <div class="card">
-        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
-      </div>
-    </div>
-    <div class="col-sm-6 col-lg-4 mb-4">
-      <div class="card p-3 text-end">
-        <figure class="mb-0">
-          <blockquote class="blockquote">
-            <p>A well-known quote, contained in a blockquote element.</p>
-          </blockquote>
-          <figcaption class="blockquote-footer mb-0 text-body-secondary">
-            Someone famous in <cite title="Source Title">Source Title</cite>
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-    <div class="col-sm-6 col-lg-4 mb-4">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
-          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      <div class="col-12 col-md-6 px-1 ps-md-3 mb-5">
+        <div class="card rounded-5 bg-secondary-subtle">
+          <a href="https://www.youtube.com/watch?v=OW1djJd9Fu0" target="_blank">
+            <%= image_tag 'abcnews.jpg' , class: 'img-fluid rounded-5 hover-effect' %>
+          </a>
         </div>
       </div>
     </div>
   </div>
+</div> 
 
 
-
-<%# <div class="ratio ratio-16x9 rounded-5">
-        <iframe src="https://www.youtube.com/embed/rBW7hVNYzNU?modestbranding=1&autohide=1&showinfo=0" title="YouTube video" allowfullscreen></iframe>
-      </div> %>
+</div>
